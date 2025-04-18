@@ -1,8 +1,8 @@
 function crackEgg() {
+  console.log("Egg clicked!"); // Per il debug
   const egg = document.getElementById("egg");
   const glow = document.getElementById("glow");
   const surprise = document.getElementById("surprise");
-  const audio = document.getElementById("moan");
 
   // Cambia immagine dell'uovo
   egg.style.backgroundImage = 'url("static/egg-broken.png")';
@@ -12,8 +12,8 @@ function crackEgg() {
 
   // Mostra la sorpresa
   setTimeout(() => {
+    console.log("Showing surprise..."); // Per il debug
     surprise.style.opacity = 1;
     surprise.style.transform = "scale(1)";
-    audio.play();
   }, 300);
 }
